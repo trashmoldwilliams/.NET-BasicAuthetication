@@ -8,12 +8,19 @@ using Microsoft.Data.Entity;
 
 namespace ProjectAuth.Models
 {
+
+  
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
         }
+
+        //public ApplicationDbContext()
+        //   : base("DefaultConnection")
+        //{
+        //}
         public DbSet<Item> Items { get; set; }
     }
 }
